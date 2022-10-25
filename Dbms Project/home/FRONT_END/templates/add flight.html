@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Airlines Add Flight</title>
+        <link rel="stylesheet" href="static/styles/navbar.css">
+        <link rel="stylesheet" href="static/styles/tb.css">
+        <style>
+            #admin_access{
+                color: rgb(93, 238, 56);
+            }
+            .formhead{
+                top: 45px;
+            }
+            .tb{
+                top: 85px;
+            }
+        </style>09   </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <li> <a href="http://127.0.0.1:5009/home">Home</a> </li>
+                <li> <a href="http://127.0.0.1:5009/ticketbooking">Book your Ticket</a> </li>
+                <li> <a href="http://127.0.0.1:5009/flightstatus">Status of your Flight</a> </li>
+                <li> <a href="http://127.0.0.1:5009/updatedetails">Update your Details</a> </li>
+                <li> <a id="admin_access" href="http://127.0.0.1:5009/adminaccess">Administrator Access</a> </li>
+            </nav>
+        </header>
+        <p class="formhead">To continue please fill in the following credentials</p>
+        <div class="tb">
+            <form action="http://127.0.0.1:5009/addflightdetails" method="POST">
+                <div class="options">
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="year">
+                </div>
+
+                <div class="options">
+                <label for="month">Month:</label>
+                <input type="number" id="month" name="month">
+                </div>
+
+                <div class="options">
+                <label for="day">Day:</label>
+                <input type="number" id="day" name="day">
+                </div>
+
+                <div class="options">
+                <label for="airline">Airline:</label>
+                <input type="text" id="airline" name="airline">
+                </div>
+
+                <div class="options">
+                <label for="flight_number">Flight Number:</label>
+                <input type="number" id="flight_number" name="flight_number">
+                </div>
+
+                <div class="options">
+                <label for="origin_airport">Origin Airport:</label>
+                <input type="text" id="origin_airport" name="origin_airport">
+                </div>
+
+                <div class="options">
+                <label for="destination_airport">Destination Airport:</label>
+                <input type="text" id="destination_airport" name="destination_airport">
+                </div>
+
+                <div class="options">
+                <label for="scheduled_departure">Scheduled Departure:</label>
+                <input type="number" id="scheduled_departure" name="scheduled_departure">
+                </div>
+
+                <div class="options">
+                <label for="scheduled_time">Scheduled Time:</label>
+                <input type="number" id="scheduled_time" name="scheduled_time">
+                </div>
+                
+                <div class="options">
+                <label for="distance">Distance:</label>
+                <input type="number" id="distance" name="distance">
+                </div>
+
+                <div class="options">
+                <label for="scheduled_arrival">Scheduled Arrival:</label>
+                <input type="number" id="scheduled_arrival" name="scheduled_arrival">
+                </div>
+                
+                <div class="options">
+                    <input type="submit" value="submit">
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>

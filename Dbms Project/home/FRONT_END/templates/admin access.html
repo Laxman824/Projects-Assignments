@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Airlines Admin Access</title>
+        <link rel="stylesheet" href="static/styles/navbar.css">
+        <link rel="stylesheet" href="static/styles/home.css">
+        <style>
+            #admin_access{
+                color: rgb(93, 238, 56);
+            }
+            table{
+                position: absolute;
+                top: 250px;
+                left: 615px;
+                width: 20%;
+                border: 5px solid rgb(248, 113, 3);
+            }
+    
+            td{
+                height: 20px;
+                text-align: center;
+                background-color: teal;
+                padding: 5px;
+                margin: 5px;
+            }
+            table tr td a{
+                text-decoration: none;
+                font-family: cursive;
+                font-size: 15px;
+                color: white;
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <li> <a href="http://127.0.0.1:5009/home">Home</a> </li>
+                <li> <a href="http://127.0.0.1:5009/ticketbooking">Book your Ticket</a> </li>
+                <li> <a href="http://127.0.0.1:5009/flightstatus">Status of your Flight</a> </li>
+                <li> <a href="http://127.0.0.1:5009/updatedetails">Update your Details</a> </li>
+                <li> <a id="admin_access" href="http://127.0.0.1:5009/adminaccess">Administrator Access</a> </li>
+            </nav>
+        </header>
+        <table>
+            <tr>
+                <td><a href="http://127.0.0.1:5009/addflight">Add new Flight</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://127.0.0.1:5009/addairport">Add new Airport</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://127.0.0.1:5009/addairline">Add new Airline</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://127.0.0.1:5009/updateflight">Update Flight Status</a></td>
+            </tr>
+        </table>
+    </body>
+</html>

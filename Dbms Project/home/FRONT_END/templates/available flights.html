@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Airlines Available flights</title>
+        <style>
+            body{
+                overflow-y: auto;
+            }
+
+            .heading{
+                position: absolute;
+                top: 50px;
+                color: chocolate;
+                font: bolder;
+                font-size: 30px;
+                font-family: monospace;
+            }
+
+            table{
+                position: absolute;
+                top: 120px;
+                width: 100%;
+            }
+
+            table,th,td{
+                height: 50px;
+            }
+
+            tr:hover{
+                background-color: #c7c6c6;
+            }
+
+            th{
+            background-color: darkorchid;
+            color: white;
+            font: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            }
+
+            td{
+                text-align: center;
+            }
+
+            .airline{
+                position: absolute;
+                top: 50px;
+                right: 10px;
+            }
+            body{
+                margin: 0px;
+                padding: 0px;
+                height: 100%;
+                width: 100%;
+                background-color: rgb(205, 227, 235);
+            }
+
+            .navbar{
+                width: 100%;
+                height: 45px;
+                position: fixed;
+            }
+
+            .navbar li{
+                width: 20%;
+                padding: 10px 0px 10px 0px;
+                background-color: rgb(89, 96, 192);
+                border-radius: 2px;
+                float: left;
+                list-style-type: none;
+                text-align: center;
+            }
+
+            a{
+                text-decoration: none;
+                color: white;
+                font-weight: bolder;
+                font-size: 20px;
+            }
+
+            a:hover{
+                color: rgb(217, 240, 216);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <li> <a href="http://127.0.0.1:5009/home">Home</a> </li>
+                <li> <a href="http://127.0.0.1:5009/ticketbooking">Book your Ticket</a> </li>
+                <li> <a href="http://127.0.0.1:5009/flightstatus">Status of your Flight</a> </li>
+                <li> <a href="http://127.0.0.1:5009/updatedetails">Update your Details</a> </li>
+                <li> <a href="http://127.0.0.1:5009/adminaccess">Administrator Access</a> </li>
+            </nav>
+        </header>
+        {%if result == []%}
+        <p class="heading">No flights available.</p>
+        {%else%}
+        <form action="http://127.0.0.1:5009/findairline/{{result[0][2]}}/{{result[0][3]}}/{{result[0][5]}}/{{result[0][6]}}" method="POST" class="airline">
+            <input type="text" name="airline" placeholder="Airline">
+        </form>
+        <p class="heading">Available flights:</p>
+        <table>
+            <tr>
+                <th>Airline</th>
+                <th>Flight Number</th>
+                <th>Origin</th>
+                <th>Departure</th>
+                <th>Year</th>
+                <th>Month</th>
+                <th>Day</th>
+                <th>Scheduled Time</th>
+                <th>Arrival Time</th>
+                <th>Book</th>
+            </tr>
+            {%for row in result%}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+                <td>{{row[6]}}</td>
+                <td>{{row[7]}}</td>
+                <td>{{row[8]}}</td>
+                <td><a href="http://127.0.0.1:5009/user_details/{{row[1]}}">Book Ticket</a></td>
+            </tr>
+            {%endfor%}
+            {%endif%}
+        </table>
+    </body>
+</html>

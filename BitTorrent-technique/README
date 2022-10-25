@@ -1,0 +1,45 @@
+# BitTorrent-Mechanism
+For a given input csv file with the URLs and no. of parallel TCP connections for each URL, the program downloads all different chunks of the file from different peers, combine them and save the file in our laptop.
+
+
+The purpose of this assignment is to understand the mechanism of BitTorrent. BitTorrent obtains a torrent file that contains a list of peers hosting the file, and downloads different chunks of the file from different peers.
+
+## Input : 
+a csv file with the following structure:  
+```
+[URL-1 for the object],[Number of parallel TCP connections to this URL]  
+[URL-2 for the object],[Number of parallel TCP connections to this URL]  
+..
+..
+```
+
+## Output :
+1. Downloaded file. gets saved in local directory.
+2. A graph showing the progress of all threads.
+
+## Example :
+### Input File :
+input.csv
+```
+vayu.iitd.ac.in/big.txt,6
+norvig.com/big.txt,4
+```
+It indicates that total 10 threads will run where 4 threads will download chunks from norvig.com server and 6 will download from vayu.iitd.ac.in server.
+### Commands to Run (Python 3.6.12) :
+```
+python main.py input.csv output.txt <total_bytes_of_the_file_to_download>
+```
+
+## Specifications of the model:
+1. It divides whole file into chunks of 10KB. 
+2. Uses HTTP GET command to download a particular range of bytes, using the Range header in HTTP. The HTTP request looks as follows:
+```
+GET /big.txt HTTP/1.1 
+Host: vayu.iitd.ac.in
+Connection: keep-alive
+Range: bytes=0-99
+```
+3. Header and data is separated via 4 characters : \r, \n, \r, \n
+4. Implementation is unaffected by irregular interruptions in internet.
+
+

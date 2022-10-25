@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Airlines User details</title>
+        <link rel="stylesheet" href="../static/styles/navbar.css">
+        <link rel="stylesheet" href="../static/styles/tb.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <li> <a href="http://127.0.0.1:5009/home">Home</a> </li>
+                <li> <a href="http://127.0.0.1:5009/ticketbooking">Book your Ticket</a> </li>
+                <li> <a href="http://127.0.0.1:5009/flightstatus">Status of your Flight</a> </li>
+                <li> <a href="http://127.0.0.1:5009/updatedetails">Update your Details</a> </li>
+                <li> <a href="http://127.0.0.1:5009/adminaccess">Administrator Access</a> </li>
+            </nav>
+        </header>
+        <p class="formhead">To continue please fill in the following user credentials</p>
+        <div class="tb">
+            <form action="http://127.0.0.1:5009/user_info/{{flight}}" method="POST">
+                <div class="options">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name">
+                </div>
+                <div class="options">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="user_Age">
+                </div>
+                <div class="options">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="user_dob">
+                </div>
+                <div class="options">
+                <label for="phone">Phone number:</label>
+                <input type="phone" id="phone" name="user_phone">
+                </div>
+                <div class="options">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="user_email">
+                </div>
+                <div class="options">
+                    <label for="pass">Password:</label>
+                    <input type="password" id="pass" name="user_pass">
+                </div>
+                <div class="options">
+                    <input type="submit" value="submit">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

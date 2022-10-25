@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Airlines Flight Status</title>
+        <link rel="stylesheet" href="static/styles/navbar.css">
+        <link rel="stylesheet" href="static/styles/ticket.css">
+        <style>
+            #home{
+                color: rgb(93, 238, 56);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <li> <a href="http://127.0.0.1:5009/home">Home</a> </li>
+                <li> <a href="http://127.0.0.1:5009/ticketbooking">Book your Ticket</a> </li>
+                <li> <a href="http://127.0.0.1:5009/flightstatus">Status of your Flight</a> </li>
+                <li> <a href="http://127.0.0.1:5009/updatedetails">Update your Details</a> </li>
+                <li> <a href="http://127.0.0.1:5009/adminaccess">Administrator Access</a> </li>
+            </nav>
+        </header>
+        <p class="heading">Your Flight Status is "{{status}}"</p>
+        <table>
+            <tr>
+                <th>Airline</th>
+                <td>{{result[0]}}</td>
+            </tr>
+            <tr>
+                <th>Flight Number</th>
+                <td>{{flight_id}}</td>
+            </tr>
+            <tr>
+                <th>Origin airport</th>
+                <td>{{origin}}</td>
+            </tr>
+            <tr>
+                <th>Destination airport</th>
+                <td>{{dest}}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{date}}</td>
+            </tr>
+            {% if result[4]==1 or result[5]==1 %}
+            {% else %}
+            <tr>
+                <th>Scheduled Time</th>
+                <td>{{result[1]}}</td>
+            </tr>
+            <tr>
+                <th>Departure Time</th>
+                <td>{{result[2]}}</td>
+            </tr>
+            <tr>
+                <th>Departure Delay</th>
+                <td>{{result[3]}}</td>
+            </tr>
+            {% endif %}
+        </table>
+    </body>
+</html>

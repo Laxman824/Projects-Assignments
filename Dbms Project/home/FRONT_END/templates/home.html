@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Airlines Home</title>
+        <link rel="stylesheet" href="static/styles/navbar.css">
+        <link rel="stylesheet" href="static/styles/home.css">
+        <style>
+            #home{
+                color: rgb(226, 235, 224);
+                background-image: url("flights.jpg");
+
+
+            }
+            .navbar li{
+                width: 25%;
+            }
+        </style>
+    </head>
+
+        <header>
+
+            <nav class="navbar">
+                <li> <a id="home" href="http://127.0.0.1:5009/home">Home</a> </li>
+                <!-- <li> <a href="http://127.0.0.1:5000/ticketbooking">Book your Ticket</a> </li> -->
+                <li> <a href="http://127.0.0.1:5009/flightstatus">Status of your Flight</a> </li>
+                <li> <a href="http://127.0.0.1:5009/updatedetails">Update your Details</a> </li>
+                <li> <a href="http://127.0.0.1:5009/adminaccess">Administrator Access</a> </li>
+            </nav>
+        </header>
+            
+            <h1>Welcome to AIRLINES DBMS PROJECT GROUP_9</h1>
+            <div class="search">
+                <a href="http://127.0.0.1:5009/searchflights">Search for flights</a>
+            </div>
+            <div class="search" id="city">
+                <a href="http://127.0.0.1:5009/searchcities">Search between cities</a>
+            </div>
+        
+    </body>
+</html>

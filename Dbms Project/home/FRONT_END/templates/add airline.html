@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Airlines Add Flight</title>
+        <link rel="stylesheet" href="static/styles/navbar.css">
+        <link rel="stylesheet" href="static/styles/tb.css">
+        <style>
+            #admin_access{
+                color: rgb(93, 238, 56);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <li> <a href="http://127.0.0.1:5009/home">Home</a> </li>
+                <li> <a href="http://127.0.0.1:5009/ticketbooking">Book your Ticket</a> </li>
+                <li> <a href="http://127.0.0.1:5009/flightstatus">Status of your Flight</a> </li>
+                <li> <a href="http://127.0.0.1:5009/updatedetails">Update your Details</a> </li>
+                <li> <a id="admin_access" href="http://127.0.0.1:5009/adminaccess">Administrator Access</a> </li>
+            </nav>
+        </header>
+        <p class="formhead">To continue please fill in the following credentials</p>
+        <div class="tb">
+            <form action="http://127.0.0.1:5009/addairlinedetails" method="POST">
+                <div class="options">
+                <label for="code">IATA CODE:</label>
+                <input type="text" id="code" name="iata_code">
+                </div>
+
+                <div class="options"> 
+                <label for="airline">Airline:</label>
+                <input type="text" id="airline" name="airline">
+                </div>
+
+                <div class="options">
+                    <input type="submit" value="submit">
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>

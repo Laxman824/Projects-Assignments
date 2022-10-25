@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Airlines Success</title>
+        <style>
+            #admin_access{
+                color: rgb(93, 238, 56);
+            }
+            .result{
+                position: absolute;
+                top: 50px;
+                left: 10px;
+                font-size: 25px;
+                font-family: sans-serif;
+                font-weight: bolder;
+                color: rgb(247, 116, 93);
+            }
+            body{
+                margin: 0px;
+                padding: 0px;
+                height: 100%;
+                width: 100%;
+                background-color: rgb(205, 227, 235);
+            }
+
+            .navbar{
+                width: 100%;
+                height: 45px;
+                position: fixed;
+                z-index: 5;
+            }
+
+            .navbar li{
+                width: 20%;
+                padding: 10px 0px 10px 0px;
+                background-color: rgb(89, 96, 192);
+                border-radius: 2px;
+                float: left;
+                list-style-type: none;
+                text-align: center;
+            }
+
+            a{
+                text-decoration: none;
+                color: white;
+                font-weight: bolder;
+                font-size: 20px;
+            }
+
+            a:hover{
+                color: rgb(217, 240, 216);
+            }
+        </style>      
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <li> <a href="http://127.0.0.1:5009/home">Home</a> </li>
+                <li> <a href="http://127.0.0.1:5009/ticketbooking">Book your Ticket</a> </li>
+                <li> <a href="http://127.0.0.1:5009/flightstatus">Status of your Flight</a> </li>
+                <li> <a href="http://127.0.0.1:5009/updatedetails">Update your Details</a> </li>
+                <li> <a id="admin_access" href="http://127.0.0.1:5009/adminaccess">Administrator Access</a> </li>
+            </nav>
+        </header>
+        <div class = "result">
+            {%if ans == 1 %}
+            New {{result}} has been added successfully
+            {%else%}
+            Flight has been UPDATED.
+            {%endif%}
+        </div>
+    </body>
+</html>

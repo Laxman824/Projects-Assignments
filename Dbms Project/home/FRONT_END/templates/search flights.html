@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Airlines Search Flights</title>
+        <link rel="stylesheet" href="static/styles/navbar.css">
+        <link rel="stylesheet" href="static/styles/tb.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <li> <a href="http://127.0.0.1:5009/home">Home</a> </li>
+                <li> <a href="http://127.0.0.1:5009/ticketbooking">Book your Ticket</a> </li>
+                <li> <a href="http://127.0.0.1:5009/flightstatus">Status of your Flight</a> </li>
+                <li> <a href="http://127.0.0.1:5009/updatedetails">Update your Details</a> </li>
+                <li> <a href="http://127.0.0.1:5009/adminaccess">Administrator Access</a> </li>
+            </nav>
+        </header>
+        <p class="formhead">To continue please fill in the following credentials</p>
+        <div class="tb">
+            <form action="http://127.0.0.1:5009/findflights" method="POST">
+                <div class="options">
+                <label for="org">Departure Airport:</label>
+                <input type="text" id="org" name="origin_airport">
+                </div>
+                <div class="options">
+                <label for="dest">Arrival Airport:</label>
+                <input type="text" id="dest" name="dest_airport">
+                </div>
+                <div class="options">
+                <label for="date">Date of Departure:</label>
+                <input type="date" id="date" name="date_of_travel">
+                </div>
+                <div class="options">
+                    <input type="submit" value="submit">
+                </div>
+            </form>
+            <p class="note">*Please select your date from the year 2015.</p>
+        </div>
+    </body>
+</html>

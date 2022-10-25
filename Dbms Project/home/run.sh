@@ -1,0 +1,1 @@
+-u postgres python3 home.py

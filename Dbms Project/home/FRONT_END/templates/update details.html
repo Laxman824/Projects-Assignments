@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Airlines Update Details</title>
+        <link rel="stylesheet" href="static/styles/navbar.css">
+        <link rel="stylesheet" href="static/styles/tb.css">
+        <style>
+            #updetails{
+                color: rgb(93, 238, 56);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <li> <a hr47="http://127.0.0.1:5009/home">Home</a> </li>
+                <li> <a href="http://127.0.0.1:5009/ticketbooking">Book your Ticket</a> </li>
+                <li> <a href="http://127.0.0.1:5009/flightstatus">Status of your Flight</a> </li>
+                <li> <a id="updetails" href="http://127.0.0.1:5009/updatedetails">Update your Details</a> </li>
+                <li> <a href="http://127.0.0.1:5009/adminaccess">Administrator Access</a> </li>
+            </nav>
+        </header>
+        <p class="formhead">To continue please fill in the following credentials</p>
+        <div class="tb">
+            <form action="http://127.0.0.1:5009/usernewdetails" method="POST">
+                <div class="options">
+                <label for="org">Departure Airport:</label>
+                <input type="text" id="org" name="origin_airport">
+                </div>
+                <div class="options">
+                <label for="dest">Arrival Airport:</label>
+                <input type="text" id="dest" name="dest_airport">
+                </div>
+                <div class="options">
+                <label for="date">Date of Departure:</label>
+                <input type="date" id="date" name="date_of_travel">
+                </div>
+                <div class="options">
+                    <label for="flightid">Flight ID:</label>
+                    <input type="text" id="flightid" name="flight_id">
+                </div>
+                <div class="options">
+                    <label for="custid">Passenger ID:</label>
+                    <input type="number" id="custid" name="cust_id">
+                </div>
+                <div class="options">
+                    <input type="submit" value="submit">
+                </div>
+            </form>
+            <p class="note">*Please select your date from the year 2015.</p>
+        </div>
+    </body>
+</html>
