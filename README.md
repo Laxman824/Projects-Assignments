@@ -1,5 +1,5 @@
 # Projects-Assignments(General Briefing)
-1.AI-Pacman heuristics :In Project Pacman 1, Pacman agent will search paths from maze
+1.*AI-Pacman heuristics* :In Project Pacman 1, Pacman agent will search paths from maze
                          to arrive at a certain destination and collect food efficiently. General search algorithms are implemented in order to fulfill different kinds of Pacman scenarios.
                          We use this game as a model to understand how different search algorithms work. In this assignment, the Pacman agent will find paths through his maze world, both to reach a particular location and to collect food efficiently.
                          Implemented this assignment in python3.
