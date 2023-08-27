@@ -24,5 +24,15 @@ There are two types of users in this system :1)Customers and 2)Admin page and ad
 5.**Traffic density Estimation-opencv**: Mainly there are two parts in this code :The basic thing we need for monitoring traffic is camera feed which is placed on real road,but we cant ensure that it is placed in a good position such that road to be watched is in a perfect rectangle and camera receives a top view.There might be numerous other things in picture which has to be eliminated for efficient working of algorithm. The opencv works best for rectangular frames,so For jobs like traffic density estimate, it's vital to first fix the camera angle in software and crop the picture to eliminate extra items.One of the repository contains camera angle correction and frame cropping code.
 
 subtask2 :The image extracted from the video which is used a background.In the further  part the utility runtime trade off analysis has been done.
+6. **Cloud Computing project** : Explaining in simple :The project was about creating a tool that helps people who use virtual machines. Virtual machines are like computers that run inside another computer. They are useful because they let people run different operating systems or software without needing a separate computer for each one.
 
+The tool we created was called a snapshotting API. It's like a camera that takes a picture of a virtual machine at a certain point in time. This picture is called a snapshot. Snapshots are useful because they let people save the state of a virtual machine and come back to it later. For example, if someone is working on a project in a virtual machine and they want to take a break, they can take a snapshot and come back to it later without losing any progress.
+
+We used a programming language called Rust to create the snapshotting API. Rust is a good language for this kind of project because it's safe and fast. This means that the API is less likely to have bugs or security problems, and it works quickly.
+
+We divided the project into five main stages. The first stage was about creating a basic virtual machine that we could use for testing. The second stage was about adding a feature that lets people pause and resume a virtual machine. The third stage was about making the snapshotting API into a smaller, more efficient program. The fourth stage was about creating a web server that could run multiple virtual machines at once. The final stage was about making the snapshotting API more efficient by using a technique called deduplication. This means that if two snapshots are very similar, we only need to save the parts that are different.
+
+The snapshotting API we created was used by different parts of the project. For example, a load balancer used it to move virtual machines around, a frontend used it to create new virtual machines from a base image, and an anti-cheating system used it to monitor who was using the virtual machines.
+
+Overall, the project was successful. We finished all of our goals before the deadline, and we created a snapshotting API that was safe, fast, and efficient.
 **For more information look into the repositories.**
