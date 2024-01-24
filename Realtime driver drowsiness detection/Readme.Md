@@ -22,4 +22,7 @@ Include some screenshots of your project to show how it looks and works.
 ![Screenshot 1](ss1.png)
 ![Screenshot 2](ss2.png)
 ![Screenshot 1](ss3.png)
+![Screenshot 1](s4.png)
+![Screenshot 1](s5.png)
+![Screenshot 1](s6.png)
 ![Screenshot 2](ss4.png)
